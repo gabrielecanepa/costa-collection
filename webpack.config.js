@@ -8,7 +8,7 @@ configDotenv()
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
-const getConfiguration = async (_env, argv) => {
+export default (_env, argv) => {
   const mode = argv.mode || process.env.NODE_ENV || 'development'
 
   return {
@@ -59,5 +59,3 @@ const getConfiguration = async (_env, argv) => {
     ],
   }
 }
-
-export default getConfiguration

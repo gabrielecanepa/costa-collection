@@ -5,6 +5,12 @@
   color: #292929;
   height: 100%;
   width: 100%;
+  min-width: calc(75% - 24px);
+  margin-right: 24px;
+  scroll-snap-align: start;
+}
+.cc_cruise-card:last-child {
+  margin-right: 0;
 }
 
 .cc_cruise-card__body {
@@ -147,8 +153,19 @@
   color: #0091f0
 }
 
+@media (min-width: 768px) {
+  .cc_cruise-card {
+    min-width: calc(38% - 24px);
+  }
+}
 
+/* Media queries */
 @media (min-width: 1024px) {
+  .cc_cruise-card {
+    margin-right: 0;
+    max-width: unset;
+  }
+
   .cc_cruise-card__image {
     height: 140px;
   }

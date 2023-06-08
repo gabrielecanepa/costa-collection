@@ -1,8 +1,11 @@
 import { configs, services } from '@/data'
 
+const { hostname: costaHostname, protocol: costaProtocol } = new URL(configs.searchResultsUrl)
+const costaBaseUrl = `${costaProtocol}//${costaHostname}`
+
 const apis = {
   costa: {
-    baseUrl: 'https://www.costacrociere.it',
+    baseUrl: costaBaseUrl,
     defaultOptions: {
       mode: 'cors',
       credentials: 'omit',
@@ -13,16 +16,14 @@ const apis = {
         'content-type': 'application/json',
         country: configs.country,
         locale: configs.locale,
+        referrer: costaBaseUrl,
         'sec-fetch-mode': 'cors',
       },
     },
     search: {
       path: services.urls.cruiseSearch,
       defaultParams: {
-        fq: [
-          '(price_EUR_anonymous:[1 TO *])',
-          'soldOut:(false)',
-        ],
+        fq: ['soldOut:(false)'],
         sort: 'departDate asc',
         group: {
           sort: 'departDate asc',
