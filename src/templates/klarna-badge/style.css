@@ -1,0 +1,38 @@
+.cc_klarna-badge {
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+  border: 1px solid #e0e0e0;
+  padding: 6px;
+  width: fit-content;
+}
+
+.cc_klarna-badge__label {
+  font-size: .6875rem;
+  letter-spacing: .01em;
+  line-height: .9625rem;
+}
+
+.cc_klarna-badge__logo {
+  height: 10px;
+  width: auto;
+}
+
+.cc_klarna-badge__btn-wrapper {
+  display: inline-block;
+  height: 20px;
+  position: relative;
+}
+.cc_klarna-badge__btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: .875rem;
+  position: relative;
+}
+.cc_klarna-badge__btn::before {
+  color: #292929;
+  content: "\E969";
+  font-family: Icomoon;
+  font-size: .875rem;
+}

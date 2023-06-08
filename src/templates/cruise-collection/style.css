@@ -1,0 +1,142 @@
+/* Base elements */
+.cc_collection {
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.cc_collection__header {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.cc_collection__intro {
+  flex: 0 0 60%;
+  max-width: 60%;
+}
+
+.cc_collection__title {
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.625rem;
+  margin: 0;
+  font-family: Poppins-700, Open-Sans-700, Arial, Helvetica, sans-serif;
+}
+
+.cc_collection__subtitle {
+  color: #63666a;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.5rem;
+  margin-top: 8px;
+}
+.cc_collection__subtitle p {
+  margin: 0;
+}
+
+.cc_collection__link {
+  display: flex;
+  flex: 1;
+  font-family: Poppins-500, Open-Sans-500, Arial, Helvetica, sans-serif;
+  justify-content: flex-end;
+  max-width: 40%;
+  padding-left: 20px;
+  letter-spacing: .05em;
+}
+.cc_collection__link a {
+  color: #0091f0;
+  display: inline-block;
+  font-size: .8125rem;
+  letter-spacing: .05em;
+  line-height: 1.125rem;
+  padding-right: 20px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+}
+.cc_collection__link a::after {
+  color: inherit;
+  content: "\E961";
+  font-family: Icomoon;
+  margin-left: 8px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform .25s ease;
+}
+.cc_collection__link:hover::after {
+  transform: translateX(4px) translateY(-50%);
+}
+.cc_collection__link:hover .cc_collection__link a::after {
+  border-bottom: 1px solid #0091f0;
+}
+.cc_collection__link span {
+  border-width: 0;
+}
+.cc_collection__link span::after {
+  background-color: #0091f0;
+  bottom: -4px;
+  content: "";
+  height: 1px;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  position: absolute;
+  transition: opacity .25s ease;
+}
+
+.cc_collection__content {
+  margin: 0 auto;
+  padding: 16px auto 0;
+  width: 100%;
+}
+
+/* Media queries */
+@media (min-width: 768px) {
+  .cc_collection__content {
+    padding: 16px 48px 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cc_collection {
+    margin: 0 auto 80px;
+  }
+
+  .cc_collection__header {
+    align-items: center;
+  }
+
+  .cc_collection__title {
+    font-size: 1.75rem;
+    line-height: 2.5rem;
+    margin: 0;
+  }
+
+  .cc_collection__subtitle {
+    font-size: 1rem;
+    line-height: 1.625rem;
+  }
+
+  .cc_collection__link {
+    line-height: 1.375rem;
+  }
+
+  .cc_collection__content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 24px;
+    padding: 23px 80px 0;
+  }
+}
+
+@media (min-width: 1552px) {
+  .cc_collection {
+    max-width: 1392px;
+  }
+
+  .cc_collection__content {
+    padding: 23px 0 0;
+  }
+}

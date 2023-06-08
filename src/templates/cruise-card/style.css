@@ -1,0 +1,161 @@
+/* Elements */
+.cc_cruise-card {
+  display: flex;
+  flex-direction: column;
+  color: #292929;
+  height: 100%;
+  width: 100%;
+}
+
+.cc_cruise-card__body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
+}
+
+.cc_cruise-card__body-header {
+  position: relative;
+}
+
+.cc_cruise-card__image {
+  height: 190px;
+  overflow: hidden;
+  transition: box-shadow .45s ease-in-out;
+}
+.cc_cruise-card__image img {
+  border-radius: 1px;
+  display: flex;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .45s ease-in-out;
+}
+
+.cc_cruise-card__days {
+  font-family: Poppins-500, Open-Sans-500, Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 60px;
+  width: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(41, 41, 41, .2);
+  backdrop-filter: blur(50px);
+  border-top-right-radius: 1px;
+  color: #fff;
+}
+.cc_cruise-card__days > div:first-child {
+  font-size: 1.25rem;
+  letter-spacing: 0;
+  line-height: 1.25rem;
+}
+.cc_cruise-card__days > div:last-child {
+  font-size: .6875rem;
+  letter-spacing: .03em;
+  line-height: 1.125rem;
+}
+
+.cc_cruise-card__content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding-top: 16px;
+}
+
+.cc_cruise-card__title {
+  color: #292929;
+  display: block;
+  font-size: 1.25rem;
+  letter-spacing: 0;
+  line-height: 1.625rem;
+  transition: color .45s ease-in-out;
+}
+
+.cc_cruise-card__description {
+  font-family: Poppins-400, Open-Sans-400, Arial, Helvetica, sans-serif;
+  color: #292929;
+  font-size: 1rem;
+  letter-spacing: 0;
+  line-height: 1.5625rem;
+  margin-top: 4px;
+}
+
+.cc_cruise-card__departures {
+  font-size: .8125rem;
+  letter-spacing: .02em;
+  line-height: 1.375rem;
+  margin-top: 8px;
+}
+.cc_cruise-card__departures > div:first-child {
+  color: #63666a;
+}
+.cc_cruise-card__departures > div:last-child {
+  color: #292929;
+}
+
+.cc_cruise-card__price {
+  margin-top: 16px;
+}
+.cc_cruise-card__price-label {
+  color: #63666a;
+  font-size: .8125rem;
+  letter-spacing: .02em;
+  line-height: 1.375rem;
+}
+.cc_cruise-card__price-value {
+  display: flex;
+  flex-flow: row wrap;
+}
+.cc_cruise-card__price-value > span {
+  color: #0091f0;
+  display: inline-flex;
+  font-size: 1.5625rem;
+  letter-spacing: 0;
+  line-height: 2.375rem;
+}
+.cc_cruise-card__price-value i {
+  font-style: normal;
+}
+
+.cc_cruise-card__legal {
+  font-family: Poppins-300, Open-Sans-300, Arial, Helvetica, sans-serif;
+  color: #63666a;
+  line-height: 1.1875rem;
+  margin-top: 8px;
+}
+.cc_cruise-card__legal p {
+  font-size: .6875rem;
+  letter-spacing: .02em;
+  margin: 0;
+}
+
+/* Pseudo classes */
+.cc_cruise-card:hover .cc_cruise-card__image {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, .2);
+}
+.cc_cruise-card:hover .cc_cruise-card__image img {
+  transform: scale(1.05)
+}
+
+.cc_cruise-card:hover .cc_cruise-card__title {
+  color: #0091f0
+}
+
+
+@media (min-width: 1024px) {
+  .cc_cruise-card__image {
+    height: 140px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .cc_cruise-card__image {
+    height: 232px;
+  }
+}
